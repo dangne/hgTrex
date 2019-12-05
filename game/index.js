@@ -2713,3 +2713,50 @@ function onDocumentLoad() {
 }
 
 document.addEventListener('DOMContentLoaded', onDocumentLoad);
+
+// Create socket to connect to the Python server-side
+var socket = new WebSocket("ws://127.0.0.1:9090");
+
+function simulateKey(type, keyCode) {
+    var eventObj = document.createEventObject ?
+        document.createEventObject() : document.createEvent("Events");
+
+    if(eventObj.initEvent){
+        eventObj.initEvent(type, true, true);
+    }
+
+    eventObj.keyCode = keyCode;
+    eventObj.which = keyCode;
+
+    document.dispatchEvent(eventObj)
+}
+
+socket.onopen = function() {
+    console.log("Browser is ready to start receiving commands...");
+};
+
+socket.onmessage = function (event) {
+    var command = event.data;
+    var runner = new Runner();
+    console.log(command);
+
+    switch (command) {
+        case 'START':
+            simulateKey("keydown", 32); // space
+            setTimeout(function() {simulateKey("keyup", 32);} , 1000);
+            break;
+        case 'UP':
+            simulateKey("keydown", 38); // arrow up
+            setTimeout(function() {simulateKey("keyup", 38);} , 400);
+            break;
+        case 'DOWN':
+            simulateKey("keydown", 40); // arrow down
+            setTimeout(function() {simulateKey("keyup", 40);} , 400);
+            break;
+        default:
+    }
+};
+
+socket.onclose = function() {
+    console.log("connection closed");
+};
