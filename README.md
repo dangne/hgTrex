@@ -7,7 +7,7 @@ Playing Google T-rex game with hand gesture.
 **Data**
 
 - [x] Make a guideline to collect data
-- [ ] Collect data
+- [x] Collect data
 
 **Model**
 
@@ -18,14 +18,14 @@ Playing Google T-rex game with hand gesture.
 **Game**
 
 - [x] Clone the existing T-rex game
-- [ ] Connect the webcam with the model's input
-- [ ] Connect the game with the model's output
+- [x] Connect the webcam with the model's input
+- [x] Connect the game with the model's output
 
 **Document**
 
 - [ ] Explain the ML pipeline (data preparation, training, evaluating, developing)
 - [ ] Explain Neural Network
 - [ ] Explain NN related stuffs (learning rate, optimizer, activation function, etc.)
-- [ ] Explain the vanilla CNN model
+- [ ] Explain the vanilla CNN model (Show video of Kai)
 - [ ] Explain the transfer learning concept
 - [ ] Brief about MobileNet
