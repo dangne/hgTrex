@@ -1,0 +1,3 @@
+0 Jumping
+1 Ducking
+2 Running
