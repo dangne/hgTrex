@@ -1,4 +1,4 @@
-# Awesome Hand Gesture Dataset
+# Awesome Hand Gestures Dataset
 Three classes: 3500+ images/class.
 
 1. **Jumping**: The dinosaur jumps
