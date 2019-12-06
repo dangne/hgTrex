@@ -6,7 +6,7 @@ Playing Google T-rex game with hand gesture.
 
 **Data**
 
-- [ ] Make a guideline to collect data
+- [x] Make a guideline to collect data
 - [ ] Collect data
 
 **Model**
@@ -17,7 +17,7 @@ Playing Google T-rex game with hand gesture.
 
 **Game**
 
-- [ ] Clone the existing T-rex game
+- [x] Clone the existing T-rex game
 - [ ] Connect the webcam with the model's input
 - [ ] Connect the game with the model's output
 
