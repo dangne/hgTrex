@@ -1,31 +1,33 @@
 # hgTrex
 
-Playing Google T-rex game with hand gesture.
 
-## **Todo:**
 
-**Data**
+## Install dependencies
 
-- [x] Make a guideline to collect data
-- [x] Collect data
+```
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
 
-**Model**
+## How do I play?
 
-- [ ] Train the vanilla DNN classification model
-- [ ] Train the vanilla CNN classification model
-- [ ] Train the MobileNet transfer learning model
+1. Open T-rex game:
 
-**Game**
+```
+sensible-browser ./src/game/index.html
+```
 
-- [x] Clone the existing T-rex game
-- [x] Connect the webcam with the model's input
-- [x] Connect the game with the model's output
+2. Run Python-server
 
-**Document**
+```
+python3 ./src/main.py
+```
 
-- [ ] Explain the ML pipeline (data preparation, training, evaluating, developing)
-- [ ] Explain Neural Network
-- [ ] Explain NN related stuffs (learning rate, optimizer, activation function, etc.)
-- [ ] Explain the vanilla CNN model (Show video of Kai)
-- [ ] Explain the transfer learning concept
-- [ ] Brief about MobileNet
+3. Press F5 to refresh the game on the browser
+
+## How do I embed my own model?
+
+1. Export your model as `model.h5` (the whole model not just the weights)
+2. Replace the ./src/model.h5 with you exported model.
+
