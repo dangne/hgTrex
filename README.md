@@ -5,6 +5,7 @@
 ## Install dependencies
 
 ```
+pip install --upgrade pip
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
@@ -21,7 +22,8 @@ sensible-browser ./src/game/index.html
 2. Run Python-server
 
 ```
-python3 ./src/main.py
+cd ./src/
+python3 main.py
 ```
 
 3. Press F5 to refresh the game on the browser
